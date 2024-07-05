@@ -1,61 +1,69 @@
--- SQLINES LICENSE FOR EVALUATION USE ONLY
-create table if not exists Persona
+create table persona
 (
-    Identificacion varchar(10)  not null
-    primary key,
-    Nombre         varchar(100) not null,
-    Genero         varchar(1)   not null,
-    Edad           int          not null,
-    Direccion      varchar(500) not null,
-    Telefono       int          not null
-    );
+    identificacion varchar(10)  not null
+        primary key,
+    nombre         varchar(100) not null,
+    genero         varchar(1)   not null,
+    edad           integer      not null,
+    direccion      varchar(500) not null,
+    telefono       integer      not null
+);
 
--- SQLINES LICENSE FOR EVALUATION USE ONLY
-create table if not exists Cliente
+alter table persona
+    owner to postgres;
+
+create table cliente
 (
-    Id         int not null
-    primary key,
-    Contraseña varchar(100)  not null,
-    Estado     int default 1 not null,
-    PersonaID  varchar(10)   null,
-    constraint Cliente_Persona_Identificacion_fk
-    foreign key (PersonaID) references Persona (Identificacion)
-    );
+    id         integer           not null
+        primary key,
+    contraseña varchar(100)      not null,
+    estado     integer default 1 not null,
+    personaid  varchar(10)
+        constraint cliente_persona_identificacion_fk
+            references persona
+);
 
--- SQLINES LICENSE FOR EVALUATION USE ONLY
-create table if not exists Productos
+alter table cliente
+    owner to postgres;
+
+create table productos
 (
-    id     int not null
-    primary key,
-    Nombre varchar(100)  not null,
-    Active int default 1 null
-    );
+    id     integer      not null
+        primary key,
+    nombre varchar(100) not null,
+    active integer default 1
+);
 
+alter table productos
+    owner to postgres;
 
-create table if not exists Cuenta
+create table movimientos
 (
-    Numero  int not null
-    primary key,
-    Tipo    int    default 1 null,
+    id     integer not null
+        primary key,
+    cuenta integer not null,
+    valor  double precision,
+    fecha  timestamp(0) default CURRENT_TIMESTAMP,
+    saldo  double precision
+);
+
+alter table movimientos
+    owner to postgres;
+
+create table cuenta
+(
+    numero  integer                    not null
+        primary key,
+    tipo    integer          default 1
+        constraint cuenta_productos_id_fk
+            references productos,
     saldo   double precision default 0 not null,
-    Estado  int    default 1 not null,
-    Cliente int              not null,
-    constraint Cuenta_Cliente_Id_fk
-    foreign key (Cliente) references Cliente (Id),
-    constraint Cuenta_Productos_id_fk
-    foreign key (Tipo) references Productos (id)
-    );
+    estado  integer          default 1 not null,
+    cliente integer                    not null
+        constraint cuenta_cliente_id_fk
+            references cliente
+);
 
--- SQLINES LICENSE FOR EVALUATION USE ONLY
-create table if not exists Movimientos
-(
-    id     int not null
-    primary key,
-    cuenta int                                 not null,
-    valor  double precision                              null,
-    fecha  timestamp(0) default CURRENT_TIMESTAMP null,
-    saldo  double precision                              null,
-    constraint Movimientos_Cuenta_Numero_fk
-    foreign key (cuenta) references Cuenta (Numero)
-    );
+alter table cuenta
+    owner to postgres;
 
