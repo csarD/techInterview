@@ -1,11 +1,11 @@
 package com.cuentamovimiento.controller;
 
-import com.clientepersona.controller.request.ClienteRequestDTO;
-import com.clientepersona.service.implementation.ClienteServiceImpl;
+
 
 import com.cuentamovimiento.controller.request.CuentaRequestDTO;
 import com.cuentamovimiento.controller.response.BaseResponse;
-import com.cuentamovimiento.controller.response.CustomResponse;
+
+
 import com.cuentamovimiento.controller.response.Response;
 import com.cuentamovimiento.repository.domain.Cuenta;
 import com.cuentamovimiento.service.implementation.CuentaServiceImpl;
