@@ -1,0 +1,129 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-gateway
+  labels:
+    app: api-gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+        - name: api-gateway
+          image: fsbvparg.azurecr.io/api-gateway:latest
+          ports:
+            - containerPort: 8765
+
+   # Requests & Limits   
+          resources:
+            requests:
+              cpu: "200m" 
+              memory: "256Mi"
+            limits:
+              cpu: "250m"
+              memory: "512Mi"  
+---     
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-cpr
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt  
+spec:
+ tls:
+  - hosts:
+    - apigwaks.smartsystems.cloud
+    secretName: api-smartsystems-secret
+ rules:
+    - host: apigwaks.smartsystems.cloud
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port: 
+                  number: 8765
+          - path: /multibecas
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port: 
+                  number: 8765
+          - path: /formulario-service
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port: 
+                  number: 8765 
+          - path: /security
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port: 
+                  number: 8765     
+          - path: /evaluation
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port: 
+                  number: 8765    
+                  
+          - path: /file-generator
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port: 
+                  number: 8765  
+          - path: /batch-process
+            pathType: Prefix
+            backend:
+              service:
+                name: api-gateway
+                port: 
+                  number: 8765 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: api-gateway
+  labels:
+    app: api-gateway
+spec:
+  type: ClusterIP
+  selector:
+    app: api-gateway
+  ports:
+    - port: 8765
+      targetPort: 8765
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: letsencrypt
+spec:
+  acme:
+    # The ACME server URL
+    server: https://acme-v02.api.letsencrypt.org/directory
+    # Email address used for ACME registration
+    email: rfeliz5@gmail.com
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: letsencrypt
+    solvers:
+      - http01:
+          ingress:
+            class: nginx

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: evaluation
+  labels:
+    app: evaluation
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: evaluation
+  template:
+    metadata:
+      labels:
+        app: evaluation
+    spec:
+      containers:
+        - name: evaluation
+          image: fsbvparg.azurecr.io/evaluation:latest
+          ports:
+            - containerPort: 8130
+
+   # Requests & Limits   
+          resources:
+            requests:
+              cpu: "50m" 
+              memory: "256Mi"
+            limits:
+              cpu: "100m"
+              memory: "384Mi"       
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: evaluation
+  labels:
+    app: evaluation
+spec:
+  type: ClusterIP
+  selector:
+    app: evaluation
+  ports:
+    - port: 8130
+      targetPort: 8130

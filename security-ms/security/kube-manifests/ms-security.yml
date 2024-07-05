@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: security
+  labels:
+    app: security
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: security
+  template:
+    metadata:
+      labels:
+        app: security
+    spec:
+      containers:
+        - name: security
+          image: fsbvparg.azurecr.io/security:latest
+          ports:
+            - containerPort: 8120
+
+   # Requests & Limits   
+          resources:
+            requests:
+              cpu: "50m" 
+              memory: "256Mi"
+            limits:
+              cpu: "100m"
+              memory: "512Mi"       
