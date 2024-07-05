@@ -1,0 +1,2042 @@
+{
+	"info": {
+		"_postman_id": "e0e1f4f7-653e-40da-8f71-9edb3c0a2da8",
+		"name": "Cuenta Movimiento Copy",
+		"description": "Servicios backend para manejo de cuentas y movimientos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12705411"
+	},
+	"item": [
+		{
+			"name": "producto",
+			"item": [
+				{
+					"name": "findAll",
+					"item": [
+						{
+							"name": "Obtener todas las productos",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/producto/findAll",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"producto",
+										"findAll"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/producto/findAll",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"producto",
+												"findAll"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": [\n    {\n      \"nombre\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"active\": \"<integer>\"\n    },\n    {\n      \"nombre\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"active\": \"<integer>\"\n    }\n  ],\n  \"statusCode\": \"<integer>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Actualizar Produto",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<integer>\",\n  \"nombre\": \"<string>\",\n  \"active\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/producto",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"nombre\": \"<string>\",\n  \"active\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/producto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"producto"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"nombre\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"active\": \"<integer>\"\n  },\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Nuevo Producto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<integer>\",\n  \"nombre\": \"<string>\",\n  \"active\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/producto",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"nombre\": \"<string>\",\n  \"active\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/producto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"producto"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"nombre\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"active\": \"<integer>\"\n  },\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar producto segun id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<integer>\",\n  \"nombre\": \"<string>\",\n  \"active\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/producto",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"producto"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"nombre\": \"<string>\",\n  \"active\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/producto",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"producto"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": \"<string>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Obtener producto segun id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/producto/?request=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"producto",
+								""
+							],
+							"query": [
+								{
+									"key": "request",
+									"value": "<integer>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/producto/?request=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"producto",
+										""
+									],
+									"query": [
+										{
+											"key": "request",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"nombre\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"active\": \"<integer>\"\n  },\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "movimiento",
+			"item": [
+				{
+					"name": "findAll",
+					"item": [
+						{
+							"name": "Obtener todas las movimientos",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/movimiento/findAll",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"movimiento",
+										"findAll"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/movimiento/findAll",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"movimiento",
+												"findAll"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": [\n    {\n      \"cuenta\": \"<integer>\",\n      \"id\": \"<integer>\",\n      \"valor\": \"<double>\",\n      \"fecha\": \"<dateTime>\",\n      \"saldo\": \"<double>\"\n    },\n    {\n      \"cuenta\": \"<integer>\",\n      \"id\": \"<integer>\",\n      \"valor\": \"<double>\",\n      \"fecha\": \"<dateTime>\",\n      \"saldo\": \"<double>\"\n    }\n  ],\n  \"statusCode\": \"<integer>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Actualizar Estado de Cuenta(Activa o Inactiva)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"numero\": \"<integer>\",\n  \"tipo\": \"<integer>\",\n  \"saldo\": \"<double>\",\n  \"estado\": \"<integer>\",\n  \"cliente\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/movimiento",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movimiento"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"numero\": \"<integer>\",\n  \"tipo\": \"<integer>\",\n  \"saldo\": \"<double>\",\n  \"estado\": \"<integer>\",\n  \"cliente\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/movimiento",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"movimiento"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": \"<string>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Nuevo Movimiento",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<integer>\",\n  \"cuenta\": \"<integer>\",\n  \"valor\": \"<double>\",\n  \"fecha\": \"<dateTime>\",\n  \"saldo\": \"<double>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/movimiento",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movimiento"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"cuenta\": \"<integer>\",\n  \"valor\": \"<double>\",\n  \"fecha\": \"<dateTime>\",\n  \"saldo\": \"<double>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/movimiento",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"movimiento"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": \"<string>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar movimiento segun id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<integer>\",\n  \"cuenta\": \"<integer>\",\n  \"valor\": \"<double>\",\n  \"fecha\": \"<dateTime>\",\n  \"saldo\": \"<double>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/movimiento",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movimiento"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"cuenta\": \"<integer>\",\n  \"valor\": \"<double>\",\n  \"fecha\": \"<dateTime>\",\n  \"saldo\": \"<double>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/movimiento",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"movimiento"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": \"<string>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Obtener movimiento segun id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/movimiento/?request=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movimiento",
+								""
+							],
+							"query": [
+								{
+									"key": "request",
+									"value": "<integer>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/movimiento/?request=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"movimiento",
+										""
+									],
+									"query": [
+										{
+											"key": "request",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"cuenta\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"valor\": \"<double>\",\n    \"fecha\": \"<dateTime>\",\n    \"saldo\": \"<double>\"\n  },\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "cuenta",
+			"item": [
+				{
+					"name": "findAll",
+					"item": [
+						{
+							"name": "Obtener todas las cuentas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cuenta/findAll",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cuenta",
+										"findAll"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/cuenta/findAll",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cuenta",
+												"findAll"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": [\n    {\n      \"cliente\": {\n        \"contrasena\": \"<string>\",\n        \"estado\": \"<integer>\",\n        \"id\": \"<integer>\",\n        \"personaid\": {\n          \"direccion\": \"<string>\",\n          \"edad\": \"<integer>\",\n          \"genero\": \"<string>\",\n          \"nombre\": \"<string>\",\n          \"telefono\": \"<integer>\",\n          \"identificacion\": \"<string>\"\n        }\n      },\n      \"estado\": \"<integer>\",\n      \"saldo\": \"<double>\",\n      \"id\": \"<integer>\",\n      \"tipo\": {\n        \"nombre\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"active\": \"<integer>\"\n      }\n    },\n    {\n      \"cliente\": {\n        \"contrasena\": \"<string>\",\n        \"estado\": \"<integer>\",\n        \"id\": \"<integer>\",\n        \"personaid\": {\n          \"direccion\": \"<string>\",\n          \"edad\": \"<integer>\",\n          \"genero\": \"<string>\",\n          \"nombre\": \"<string>\",\n          \"telefono\": \"<integer>\",\n          \"identificacion\": \"<string>\"\n        }\n      },\n      \"estado\": \"<integer>\",\n      \"saldo\": \"<double>\",\n      \"id\": \"<integer>\",\n      \"tipo\": {\n        \"nombre\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"active\": \"<integer>\"\n      }\n    }\n  ],\n  \"statusCode\": \"<integer>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Obtener cuenta segun id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/cuenta/?request=<integer>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cuenta",
+								""
+							],
+							"query": [
+								{
+									"key": "request",
+									"value": "<integer>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cuenta/?request=<integer>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cuenta",
+										""
+									],
+									"query": [
+										{
+											"key": "request",
+											"value": "<integer>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"cliente\": {\n      \"contrasena\": \"<string>\",\n      \"estado\": \"<integer>\",\n      \"id\": \"<integer>\",\n      \"personaid\": {\n        \"direccion\": \"<string>\",\n        \"edad\": \"<integer>\",\n        \"genero\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"telefono\": \"<integer>\",\n        \"identificacion\": \"<string>\"\n      }\n    },\n    \"estado\": \"<integer>\",\n    \"saldo\": \"<double>\",\n    \"id\": \"<integer>\",\n    \"tipo\": {\n      \"nombre\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"active\": \"<integer>\"\n    }\n  },\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Actualizar Estado de Cuenta(Activa o Inactiva)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"numero\": \"<integer>\",\n  \"tipo\": \"<integer>\",\n  \"saldo\": \"<double>\",\n  \"estado\": \"<integer>\",\n  \"cliente\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cuenta",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cuenta"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"numero\": \"<integer>\",\n  \"tipo\": \"<integer>\",\n  \"saldo\": \"<double>\",\n  \"estado\": \"<integer>\",\n  \"cliente\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cuenta",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cuenta"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"cliente\": {\n      \"contrasena\": \"<string>\",\n      \"estado\": \"<integer>\",\n      \"id\": \"<integer>\",\n      \"personaid\": {\n        \"direccion\": \"<string>\",\n        \"edad\": \"<integer>\",\n        \"genero\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"telefono\": \"<integer>\",\n        \"identificacion\": \"<string>\"\n      }\n    },\n    \"estado\": \"<integer>\",\n    \"saldo\": \"<double>\",\n    \"id\": \"<integer>\",\n    \"tipo\": {\n      \"nombre\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"active\": \"<integer>\"\n    }\n  },\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Nueva Cuenta",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"numero\": \"<integer>\",\n  \"tipo\": \"<integer>\",\n  \"saldo\": \"<double>\",\n  \"estado\": \"<integer>\",\n  \"cliente\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cuenta",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cuenta"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"numero\": \"<integer>\",\n  \"tipo\": \"<integer>\",\n  \"saldo\": \"<double>\",\n  \"estado\": \"<integer>\",\n  \"cliente\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cuenta",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cuenta"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"cliente\": {\n      \"contrasena\": \"<string>\",\n      \"estado\": \"<integer>\",\n      \"id\": \"<integer>\",\n      \"personaid\": {\n        \"direccion\": \"<string>\",\n        \"edad\": \"<integer>\",\n        \"genero\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"telefono\": \"<integer>\",\n        \"identificacion\": \"<string>\"\n      }\n    },\n    \"estado\": \"<integer>\",\n    \"saldo\": \"<double>\",\n    \"id\": \"<integer>\",\n    \"tipo\": {\n      \"nombre\": \"<string>\",\n      \"id\": \"<integer>\",\n      \"active\": \"<integer>\"\n    }\n  },\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar Cuenta segun id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"numero\": \"<integer>\",\n  \"tipo\": \"<integer>\",\n  \"saldo\": \"<double>\",\n  \"estado\": \"<integer>\",\n  \"cliente\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cuenta",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cuenta"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"numero\": \"<integer>\",\n  \"tipo\": \"<integer>\",\n  \"saldo\": \"<double>\",\n  \"estado\": \"<integer>\",\n  \"cliente\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cuenta",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cuenta"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": \"<string>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "reportes",
+			"item": [
+				{
+					"name": "Obtener datos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/reportes?fechaInicial=<dateTime>&fechaFinal=<dateTime>&idCliente=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "fechaInicial",
+									"value": "<dateTime>",
+									"description": "(Required) "
+								},
+								{
+									"key": "fechaFinal",
+									"value": "<dateTime>",
+									"description": "(Required) "
+								},
+								{
+									"key": "idCliente",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reportes?fechaInicial=<dateTime>&fechaFinal=<dateTime>&idCliente=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reportes"
+									],
+									"query": [
+										{
+											"key": "fechaInicial",
+											"value": "<dateTime>",
+											"description": "(Required) "
+										},
+										{
+											"key": "fechaFinal",
+											"value": "<dateTime>",
+											"description": "(Required) "
+										},
+										{
+											"key": "idCliente",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"timestamp\": \"<dateTime>\",\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"nostrud_08\": {},\n    \"ullamco_9cd\": {}\n  },\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "cliente",
+			"item": [
+				{
+					"name": "findAll",
+					"item": [
+						{
+							"name": "Obtener todas las Clientes",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cliente/findAll",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cliente",
+										"findAll"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/cliente/findAll",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cliente",
+												"findAll"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"payload\": [\n    {\n      \"contrasena\": \"<string>\",\n      \"estado\": \"<integer>\",\n      \"id\": \"<integer>\",\n      \"personaid\": {\n        \"direccion\": \"<string>\",\n        \"edad\": \"<integer>\",\n        \"genero\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"telefono\": \"<integer>\",\n        \"identificacion\": \"<string>\"\n      }\n    },\n    {\n      \"contrasena\": \"<string>\",\n      \"estado\": \"<integer>\",\n      \"id\": \"<integer>\",\n      \"personaid\": {\n        \"direccion\": \"<string>\",\n        \"edad\": \"<integer>\",\n        \"genero\": \"<string>\",\n        \"nombre\": \"<string>\",\n        \"telefono\": \"<integer>\",\n        \"identificacion\": \"<string>\"\n      }\n    }\n  ],\n  \"timestamp\": \"<dateTime>\",\n  \"statusCode\": \"<integer>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Obtener cliente segun id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/cliente?request=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cliente"
+							],
+							"query": [
+								{
+									"key": "request",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cliente?request=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cliente"
+									],
+									"query": [
+										{
+											"key": "request",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"contrasena\": \"<string>\",\n    \"estado\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"personaid\": {\n      \"direccion\": \"<string>\",\n      \"edad\": \"<integer>\",\n      \"genero\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"telefono\": \"<integer>\",\n      \"identificacion\": \"<string>\"\n    }\n  },\n  \"timestamp\": \"<dateTime>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Actualizar Cliente",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<integer>\",\n  \"contrasena\": \"<string>\",\n  \"estado\": \"<integer>\",\n  \"personaid\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cliente",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"contrasena\": \"<string>\",\n  \"estado\": \"<integer>\",\n  \"personaid\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cliente",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cliente"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"contrasena\": \"<string>\",\n    \"estado\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"personaid\": {\n      \"direccion\": \"<string>\",\n      \"edad\": \"<integer>\",\n      \"genero\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"telefono\": \"<integer>\",\n      \"identificacion\": \"<string>\"\n    }\n  },\n  \"timestamp\": \"<dateTime>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Nuevo Cliente",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<integer>\",\n  \"contrasena\": \"<string>\",\n  \"estado\": \"<integer>\",\n  \"personaid\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cliente",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"contrasena\": \"<string>\",\n  \"estado\": \"<integer>\",\n  \"personaid\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cliente",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cliente"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"contrasena\": \"<string>\",\n    \"estado\": \"<integer>\",\n    \"id\": \"<integer>\",\n    \"personaid\": {\n      \"direccion\": \"<string>\",\n      \"edad\": \"<integer>\",\n      \"genero\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"telefono\": \"<integer>\",\n      \"identificacion\": \"<string>\"\n    }\n  },\n  \"timestamp\": \"<dateTime>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar cliente segun id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"<integer>\",\n  \"contrasena\": \"<string>\",\n  \"estado\": \"<integer>\",\n  \"personaid\": \"<string>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cliente",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cliente"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"id\": \"<integer>\",\n  \"contrasena\": \"<string>\",\n  \"estado\": \"<integer>\",\n  \"personaid\": \"<string>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cliente",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cliente"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\",\n  \"payload\": \"<string>\",\n  \"timestamp\": \"<dateTime>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "persona",
+			"item": [
+				{
+					"name": "findAll",
+					"item": [
+						{
+							"name": "Obtener todas las personas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/persona/findAll",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"persona",
+										"findAll"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/persona/findAll",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"persona",
+												"findAll"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"<string>\",\n  \"payload\": [\n    {\n      \"direccion\": \"<string>\",\n      \"edad\": \"<integer>\",\n      \"genero\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"telefono\": \"<integer>\",\n      \"identificacion\": \"<string>\"\n    },\n    {\n      \"direccion\": \"<string>\",\n      \"edad\": \"<integer>\",\n      \"genero\": \"<string>\",\n      \"nombre\": \"<string>\",\n      \"telefono\": \"<integer>\",\n      \"identificacion\": \"<string>\"\n    }\n  ],\n  \"timestamp\": \"<dateTime>\",\n  \"statusCode\": \"<integer>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Obtener persona segun id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/persona?request=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"persona"
+							],
+							"query": [
+								{
+									"key": "request",
+									"value": "<string>",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/persona?request=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"persona"
+									],
+									"query": [
+										{
+											"key": "request",
+											"value": "<string>",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"direccion\": \"<string>\",\n    \"edad\": \"<integer>\",\n    \"genero\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"telefono\": \"<integer>\",\n    \"identificacion\": \"<string>\"\n  },\n  \"timestamp\": \"<dateTime>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Actualizar persona",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"identificacion\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"genero\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"telefono\": \"<integer>\",\n  \"edad\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/persona",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"persona"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"identificacion\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"genero\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"telefono\": \"<integer>\",\n  \"edad\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/persona",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"persona"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"direccion\": \"<string>\",\n    \"edad\": \"<integer>\",\n    \"genero\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"telefono\": \"<integer>\",\n    \"identificacion\": \"<string>\"\n  },\n  \"timestamp\": \"<dateTime>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Nueva Persona",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"identificacion\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"genero\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"telefono\": \"<integer>\",\n  \"edad\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/persona",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"persona"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"identificacion\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"genero\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"telefono\": \"<integer>\",\n  \"edad\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/persona",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"persona"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\",\n  \"payload\": {\n    \"direccion\": \"<string>\",\n    \"edad\": \"<integer>\",\n    \"genero\": \"<string>\",\n    \"nombre\": \"<string>\",\n    \"telefono\": \"<integer>\",\n    \"identificacion\": \"<string>\"\n  },\n  \"timestamp\": \"<dateTime>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Eliminar persona segun id",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"identificacion\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"genero\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"telefono\": \"<integer>\",\n  \"edad\": \"<integer>\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/persona",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"persona"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"identificacion\": \"<string>\",\n  \"nombre\": \"<string>\",\n  \"genero\": \"<string>\",\n  \"direccion\": \"<string>\",\n  \"telefono\": \"<integer>\",\n  \"edad\": \"<integer>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/persona",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"persona"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"message\": \"<string>\",\n  \"payload\": \"<string>\",\n  \"timestamp\": \"<dateTime>\",\n  \"statusCode\": \"<integer>\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://localhost:8140"
+		}
+	]
+}
